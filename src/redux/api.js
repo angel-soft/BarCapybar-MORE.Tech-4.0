@@ -65,23 +65,53 @@ export const api = {
             toPublicKey,
             tokenId
         })
-        // `v1/transfers/nft`
+
+        return { transactionHash }
     },
-    /* метод статуса выполнения транзакции */
-    async transferStatus() {
-        // `/v1/transfers/status/{transactionHash}`
+    /* метод статуса выполнения транзакции
+    - transactionHash - идентификатор транзакции в блокчейне
+    * */
+    async transferStatus({ transactionHash }) {
+        const {
+            status
+        } = await axios.post(`/v1/transfers/status/${transactionHash}`)
+
+        return { status }
     },
     /* метод получения баланса по кошельку */
-    async walletBalance(){
-        // `/v1/wallets/{publicKey}/balance`
+    async walletBalance({ publicKey }){
+        const {
+            maticAmount,
+            coinsAmount
+        } = await axios.get(`/v1/wallets/${publicKey}/balance`)
+
+        return { maticAmount, coinsAmount }
     },
-    /* метод получения баланса NFT-коллекций по кошельку */
-    async walletNftBalance(){
-        // `/v1/wallets/{publicKey}/nft/balance`
+    /* метод получения баланса NFT-коллекций по кошельку
+    publicKey - публичный ключ (адрес) кошелька, по которому отправляется запрос
+    * */
+    async walletNftBalance({ publicKey }){
+        const {
+            /*
+                - `URI` - унифицированный (единообразный) идентификатор ресурса, сопряженный с NFT-коллекцией
+                - `tokens` - массив NFT. Т.е. 5,3,4,6 - уникальные идентификаторы отдельного NFT в NFT-коллекции
+             */
+            balance // Array<{URI: string, tokens: Array<number> }>
+        } = await axios.get(`/v1/wallets/${publicKey}/nft/balance`)
+
+        return { balance }
     },
-    /* метод генерации NFT-коллекций на кошелек */
-    async generateNft() {
-        // `/v1/nft/generate`
+    /* метод генерации NFT-коллекций на кошелек
+    - `toPublicKey` - публичный ключ кошелька Polygon
+    - `uri` - унифицированный (единообразный) идентификатор ресурса, сопряженный с NFT-коллекцией
+    - `nftCount` - количество генерируемых NFT в коллекции
+    * */
+    async generateNft({ toPublicKey, uri, nftCount }) {
+        const {
+            transactionHash
+        } = await axios.post(`/v1/nft/generate`)
+
+        return { transactionHash }
     },
     /* метод получения списка сгенерированных NFT */
     async listNft() {
