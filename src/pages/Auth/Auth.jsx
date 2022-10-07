@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useStore } from 'react-redux';
 import { login } from '../../redux/actions/userActions';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -9,24 +8,23 @@ import "./Auth.css";
 function Auth() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const isAuth = useSelector((state) => state.root.isAuth);
+  const store = useStore()
+
   const [formData, setFormData] = useState({
     login: "",
-		password: "",
+    password: "",
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(login(formData));
 
-    setTimeout(() => { 
-      if(isAuth) {
-        toast("Вы успешно зарегистрированы");
-        navigate("/");
-      } else {
-        toast("Ошибка");
-      }
-    }, "1000")
+    if(store.getState().root.isAuth) {
+      toast("Вы успешно зарегистрированы");
+      navigate("/");
+    } else {
+      toast("Ошибка");
+    }
   };
 
   const handleChange = (e) => {
@@ -42,22 +40,19 @@ function Auth() {
     <div className="container-wrap">
     <div className="form-wrapper">
     <h2>Войти в сервис</h2>
-    <form onSubmit={handleSubmit}>
+    <form name="auth" onSubmit={handleSubmit} autoComplete={"on"}>
       <div className="card-input">
       <label htmlFor="login" className="card-input__label">Имя</label>
-          <input type="text" name="login" id="login" className="card-input__input" value={formData.login}
-            onChange={handleChange} />
+          <input autoComplete="on" type="text" name="login" id="login" className="card-input__input" value={formData.login}
+                 onChange={handleChange} />
         </div>
         <div className="card-input">
           <label htmlFor="password" className="card-input__label">Пароль</label>
-          <input name="password" type="password" id="password" className="card-input__input" value={formData.password}
-            onChange={handleChange} />
+          <input autoComplete="on" name="password" type="password" id="password" className="card-input__input" value={formData.password}
+                 onChange={handleChange} />
         </div>
-      <button className="btn">Войти</button>
+      <button className="btn" type="submit">Войти</button>
     </form>
-
-    <p>Уже есть аккаунт?</p>
-    <Link className="nav-item-link" to="/login">Войти</Link>
   </div>
   </div>
   );
