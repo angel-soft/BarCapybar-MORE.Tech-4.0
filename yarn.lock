@@ -3865,6 +3865,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axios@npm:1.1.2":
+  version: 1.1.2
+  resolution: "axios@npm:1.1.2"
+  dependencies:
+    follow-redirects: ^1.15.0
+    form-data: ^4.0.0
+    proxy-from-env: ^1.1.0
+  checksum: 136c25a5031aa2845fdbda3006c36888bbe351b11d1195f1f898a23c5df1430febbdb1ad034a61f27967e83762d5b5a3e851fff8a363cb4badeb883f8ff21461
+  languageName: node
+  linkType: hard
+
 "axobject-query@npm:^2.2.0":
   version: 2.2.0
   resolution: "axobject-query@npm:2.2.0"
@@ -4100,6 +4111,7 @@ __metadata:
     "@testing-library/jest-dom": ^4.2.4
     "@testing-library/react": ^9.3.2
     "@testing-library/user-event": ^7.1.2
+    axios: 1.1.2
     emailjs-com: ^2.6.4
     react: ^17.0.1
     react-dom: ^17.0.1
@@ -4969,7 +4981,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"combined-stream@npm:^1.0.6, combined-stream@npm:~1.0.6":
+"combined-stream@npm:^1.0.6, combined-stream@npm:^1.0.8, combined-stream@npm:~1.0.6":
   version: 1.0.8
   resolution: "combined-stream@npm:1.0.8"
   dependencies:
@@ -7234,6 +7246,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"follow-redirects@npm:^1.15.0":
+  version: 1.15.2
+  resolution: "follow-redirects@npm:1.15.2"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: faa66059b66358ba65c234c2f2a37fcec029dc22775f35d9ad6abac56003268baf41e55f9ee645957b32c7d9f62baf1f0b906e68267276f54ec4b4c597c2b190
+  languageName: node
+  linkType: hard
+
 "for-in@npm:^1.0.2":
   version: 1.0.2
   resolution: "for-in@npm:1.0.2"
@@ -7260,6 +7282,17 @@ __metadata:
     tapable: ^1.0.0
     worker-rpc: ^0.1.0
   checksum: 4cc4fa7919dd9a0d765514d064c86e3a6f9cea8e700996b3e775cfcc0280f606a2dd16203d9b7e294b64e900795b0d80eb41fc8c192857d3350e407f14ef3eed
+  languageName: node
+  linkType: hard
+
+"form-data@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "form-data@npm:4.0.0"
+  dependencies:
+    asynckit: ^0.4.0
+    combined-stream: ^1.0.8
+    mime-types: ^2.1.12
+  checksum: 01135bf8675f9d5c61ff18e2e2932f719ca4de964e3be90ef4c36aacfc7b9cb2fceb5eca0b7e0190e3383fe51c5b37f4cb80b62ca06a99aaabfcfd6ac7c9328c
   languageName: node
   linkType: hard
 
@@ -12388,6 +12421,13 @@ __metadata:
     forwarded: ~0.1.2
     ipaddr.js: 1.9.1
   checksum: 2bad9b7a56b847faf606a19328aaaf5fca3e561ebb4e933969a580d94a20f77e74fb21196028a6e417851b3d9d95a0c704732a3362e3ef515d45d96859ac7eb9
+  languageName: node
+  linkType: hard
+
+"proxy-from-env@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "proxy-from-env@npm:1.1.0"
+  checksum: ed7fcc2ba0a33404958e34d95d18638249a68c430e30fcb6c478497d72739ba64ce9810a24f53a7d921d0c065e5b78e3822759800698167256b04659366ca4d4
   languageName: node
   linkType: hard
 
