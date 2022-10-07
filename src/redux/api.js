@@ -109,7 +109,9 @@ export const api = {
     async generateNft({ toPublicKey, uri, nftCount }) {
         const {
             transactionHash
-        } = await axios.post(`/v1/nft/generate`)
+        } = await axios.post(`/v1/nft/generate`, {
+            toPublicKey, uri, nftCount
+        })
 
         return { transactionHash }
     },
