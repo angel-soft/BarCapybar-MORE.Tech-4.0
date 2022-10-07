@@ -4,6 +4,7 @@ import SmoothScroll from "smooth-scroll";
 import Main from "./pages/Main/Main";
 import Auth from "./pages/Auth/Auth";
 import UserList from "./pages/UserList/UserList";
+import { Profile } from "./pages/Profile/Profile";
 import { AuthRedirect } from "./AuthRedirect";
 import "./App.css";
 import { ToastContainer } from 'react-toastify';
@@ -25,6 +26,7 @@ function App() {
             <Route path="/" element={<Main />} />
             <Route path="/login" element={<Auth />} />
             <Route path="/users" element={<UserList />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
       </BrowserRouter>
     <ToastContainer />

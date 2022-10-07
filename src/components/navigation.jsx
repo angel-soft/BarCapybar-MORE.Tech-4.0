@@ -29,14 +29,9 @@ export const Navigation = (props) => {
           <ul className='nav navbar-nav navbar-right'>
             <li>
               <Link to={"/users"}>Список пользователей</Link>
-              {/* <a href='#features' className='page-scroll'>
-                Features
-              </a> */}
             </li>
             <li>
-              <a href='#about' className='page-scroll'>
-                About
-              </a>
+            <Link to={"/profile"}>Профиль</Link>
             </li>
             <li>
               <a href='#services' className='page-scroll'>

@@ -1,4 +1,4 @@
-import * as TYPE from "../actionTypes";
+import * as ActionTypes from "../actionTypes";
 import usersData from "../../data/users.json";
 
 const initialState = {
@@ -10,7 +10,7 @@ const initialState = {
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
 
-    case TYPE.LOGIN: {
+    case ActionTypes.LOGIN: {
       const { login, password } = action.payload;
       const found = state.users.find(user => {
         if (login === user.login && password === user.password) {
@@ -29,14 +29,14 @@ export const reducer = (state = initialState, action) => {
       return state
     }
 
-    case TYPE.LOGOUT: {
+    case ActionTypes.LOGOUT: {
       return {
         ...state, 
         isAuth: false,
       }
     }
 
-    case TYPE.WALLET_NFT_BALANCE_SUCCESS: {
+    case ActionTypes.WALLET_NFT_BALANCE_SUCCESS: {
       const { publicKey, balance } = action.payload;
 
       const index = state.users.findIndex((user) => user.publicKey === publicKey);
