@@ -17,7 +17,7 @@ import {
 } from '../actionTypes'
 
 async function* walletBalanceSaga({ publicKey }) {
-    const { maticAmount, coinsAmount } = await api.walletBalance({})
+    const { maticAmount, coinsAmount } = await api.walletBalance({ publicKey })
 
     yield put(walletBalanceSuccess({
         publicKey,
@@ -26,6 +26,17 @@ async function* walletBalanceSaga({ publicKey }) {
     }))
 }
 
+async function* listNftSaga({ transactionHash }) {
+    const { tokens, wallet_id} = await api.listNft({ transactionHash})
+
+    yield put(walletBalanceSuccess({
+        transactionHash,
+        tokens,
+        wallet_id
+    }))
+}
+
 export function* rootSaga() {
     yield takeEvery(WALLET_BALANCE_REQUEST, walletBalanceSaga)
+    yield takeEvery(LIST_NFT_REQUEST, listNftSaga)
 }
