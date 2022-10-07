@@ -1,6 +1,6 @@
 import { takeEvery, put } from 'redux-saga/effects'
 import { api } from '../api'
-import { walletBalanceSuccess } from '../actions/apiActions'
+import {listNftSuccess, transferMaticSuccess, transferRubleSuccess, walletBalanceSuccess} from '../actions/apiActions'
 
 import {
     TRANSFER_MATIC_REQUEST,
@@ -16,7 +16,27 @@ import {
     WALLET_HISTORY_REQUEST,
 } from '../actionTypes'
 
-async function* walletBalanceSaga({ publicKey }) {
+async function* transferMaticSaga({ payload: { fromPrivateKey, toPublicKey, amount } }) {
+    const { transactionHash } = await api.transferMatic({ fromPrivateKey, toPublicKey, amount })
+
+    yield put(transferMaticSuccess({
+        fromPrivateKey,
+        toPublicKey,
+        amount,
+        transactionHash
+    }))
+}
+async function* transferRubleSaga({ payload: { fromPrivateKey, toPublicKey, amount } }) {
+    const { transactionHash } = await api.transferRuble({ fromPrivateKey, toPublicKey, amount })
+
+    yield put(transferRubleSuccess({
+        fromPrivateKey,
+        toPublicKey,
+        amount,
+        transactionHash
+    }))
+}
+async function* walletBalanceSaga({ payload: { publicKey } }) {
     const { maticAmount, coinsAmount } = await api.walletBalance({ publicKey })
 
     yield put(walletBalanceSuccess({
@@ -26,10 +46,10 @@ async function* walletBalanceSaga({ publicKey }) {
     }))
 }
 
-async function* listNftSaga({ transactionHash }) {
-    const { tokens, wallet_id} = await api.listNft({ transactionHash})
+async function* listNftSaga({ payload: { transactionHash } }) {
+    const { tokens, wallet_id} = await api.listNft({ transactionHash })
 
-    yield put(walletBalanceSuccess({
+    yield put(listNftSuccess({
         transactionHash,
         tokens,
         wallet_id
@@ -37,6 +57,8 @@ async function* listNftSaga({ transactionHash }) {
 }
 
 export function* rootSaga() {
+    yield takeEvery(TRANSFER_MATIC_REQUEST, transferMaticSaga)
+    yield takeEvery(TRANSFER_RUBLE_REQUEST, transferRubleSaga)
     yield takeEvery(WALLET_BALANCE_REQUEST, walletBalanceSaga)
     yield takeEvery(LIST_NFT_REQUEST, listNftSaga)
 }
