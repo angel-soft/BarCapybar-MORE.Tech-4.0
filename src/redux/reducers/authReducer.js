@@ -1,4 +1,4 @@
-import { LOGOUT, SIGNUP } from "../actionTypes"
+import { LOGOUT, LOGIN } from "../actionTypes"
 
 const initialState = {
   isAuth: false,
@@ -7,11 +7,10 @@ const initialState = {
 export const authReducer = (state = initialState, action) => {
   switch (action.type) {
 
-    case SIGNUP: {
+    case LOGIN: {
       return {
-        state, 
-        isAuth: true,
-        ...action.payload}
+        ...action.payload,
+        isAuth: true }
     }
 
     case LOGOUT: {

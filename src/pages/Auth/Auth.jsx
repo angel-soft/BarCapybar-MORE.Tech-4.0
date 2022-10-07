@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { signup } from '../../redux/actions/authActions';
+import { login } from '../../redux/actions/authActions';
 import { useNavigate } from 'react-router-dom';
-import "./Signup.css";
+import "./Auth.css";
 
-function Signup() {
+function Auth() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -18,7 +18,7 @@ function Signup() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(signup(formData));
+    dispatch(login(formData));
 
     navigate("/");
   };
@@ -72,4 +72,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default Auth;

@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import SmoothScroll from "smooth-scroll";
 import Main from "./pages/Main/Main"
-import Signup from "./pages/Auth/Signup"
+import Auth from "./pages/Auth/Auth"
 import { AuthRedirect } from "./AuthRedirect";
 import "./App.css";
 
@@ -19,7 +19,7 @@ function App() {
     <AuthRedirect />
           <Routes>
             <Route path="/" element={<Main />}/>
-            <Route path="/signup" element={<Signup />}/>
+            <Route path="/login" element={<Auth />}/>
           </Routes>
     </BrowserRouter>
   );

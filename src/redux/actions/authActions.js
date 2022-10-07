@@ -1,7 +1,7 @@
-import { LOGOUT, SIGNUP } from "../actionTypes"
+import { LOGOUT, LOGIN } from "../actionTypes"
 
-export const signup = (user) => ({
-  type: SIGNUP,
+export const login = (user) => ({
+  type: LOGIN,
   payload: user
 })
 
