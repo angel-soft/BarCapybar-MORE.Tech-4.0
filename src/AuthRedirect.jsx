@@ -5,11 +5,11 @@ import { useNavigate } from 'react-router-dom';
 export const AuthRedirect = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const isAuth = useSelector((state) => state.auth.isAuth);
+  const isAuth = useSelector((state) => state.root.isAuth);
 
   useEffect(() => {
     if (!isAuth) {
-      navigate("/signup");
+      navigate("/login");
     }
   }, [dispatch, isAuth, navigate]);
 

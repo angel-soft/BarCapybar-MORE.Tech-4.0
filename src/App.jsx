@@ -5,6 +5,8 @@ import Main from "./pages/Main/Main"
 import Auth from "./pages/Auth/Auth"
 import { AuthRedirect } from "./AuthRedirect";
 import "./App.css";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -15,13 +17,16 @@ export const scroll = new SmoothScroll('a[href*="#"]', {
 function App() {
 
   return (
+    <>
     <BrowserRouter>
-    <AuthRedirect />
+      <AuthRedirect />
           <Routes>
             <Route path="/" element={<Main />}/>
             <Route path="/login" element={<Auth />}/>
           </Routes>
-    </BrowserRouter>
+      </BrowserRouter>
+    <ToastContainer />
+    </>
   );
 }
 

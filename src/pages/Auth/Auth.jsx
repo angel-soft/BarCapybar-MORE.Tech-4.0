@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { login } from '../../redux/actions/authActions';
+import { useDispatch, useSelector } from 'react-redux';
+import { login } from '../../redux/actions/userActions';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import "./Auth.css";
 
 function Auth() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const isAuth = useSelector((state) => state.root.isAuth);
   const [formData, setFormData] = useState({
     login: "",
 		password: "",
@@ -17,7 +19,14 @@ function Auth() {
     e.preventDefault();
     dispatch(login(formData));
 
-    navigate("/");
+    setTimeout(() => { 
+      if(isAuth) {
+        toast("Вы успешно зарегистрированы");
+        navigate("/");
+      } else {
+        toast("Ошибка");
+      }
+    }, "1000")
   };
 
   const handleChange = (e) => {
@@ -32,7 +41,7 @@ function Auth() {
   return (
     <div className="container-wrap">
     <div className="form-wrapper">
-    <h2>Зарегистрируйте свой аккаунт</h2>
+    <h2>Войти в сервис</h2>
     <form onSubmit={handleSubmit}>
       <div className="card-input">
       <label htmlFor="login" className="card-input__label">Имя</label>
