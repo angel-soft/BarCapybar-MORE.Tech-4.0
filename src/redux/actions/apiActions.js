@@ -90,7 +90,7 @@ export const transferStatusRequest = ({ transactionHash }) => ({
         transactionHash
     }
 })
-export const transferStatusSuccess = ({ transactionHash }) => ({
+export const transferStatusSuccess = ({ transactionHash, status }) => ({
     type: TRANSFER_STATUS_SUCCESS,
     payload: {
         transactionHash,
