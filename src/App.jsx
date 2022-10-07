@@ -1,8 +1,9 @@
 import React from "react";
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import SmoothScroll from "smooth-scroll";
-import Main from "./pages/Main/Main"
-import Auth from "./pages/Auth/Auth"
+import Main from "./pages/Main/Main";
+import Auth from "./pages/Auth/Auth";
+import UserList from "./pages/UserList/UserList";
 import { AuthRedirect } from "./AuthRedirect";
 import "./App.css";
 import { ToastContainer } from 'react-toastify';
@@ -21,8 +22,9 @@ function App() {
     <BrowserRouter>
       <AuthRedirect />
           <Routes>
-            <Route path="/" element={<Main />}/>
-            <Route path="/login" element={<Auth />}/>
+            <Route path="/" element={<Main />} />
+            <Route path="/login" element={<Auth />} />
+            <Route path="/users" element={<UserList />} />
           </Routes>
       </BrowserRouter>
     <ToastContainer />

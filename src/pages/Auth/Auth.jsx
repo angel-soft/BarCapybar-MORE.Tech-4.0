@@ -27,7 +27,7 @@ function Auth() {
       } else {
         toast("Ошибка");
       }
-    }, "1000")
+    }, 1000);
   };
 
   const handleChange = (e) => {

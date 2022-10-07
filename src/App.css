@@ -23,6 +23,11 @@ body {
   font-weight: 400;
 }
 
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
 
 @media screen and (max-width: 400px) {
   #features {

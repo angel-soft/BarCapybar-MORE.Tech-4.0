@@ -1,8 +1,8 @@
-import { LOGOUT, LOGIN } from "../actionTypes";
+import * as TYPE from "../actionTypes";
 import usersData from "../../data/users.json";
 
 const initialState = {
-  isAuth: false,
+  isAuth: true,
   user: {},
   users: usersData,
 }
@@ -10,8 +10,7 @@ const initialState = {
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
 
-    case LOGIN: {
-
+    case TYPE.LOGIN: {
       const { login, password } = action.payload;
       const found = state.users.find(user => {
         if (login === user.login && password === user.password) {
@@ -30,11 +29,30 @@ export const reducer = (state = initialState, action) => {
       return state
     }
 
-    case LOGOUT: {
+    case TYPE.LOGOUT: {
       return {
         ...state, 
         isAuth: false,
       }
+    }
+
+    case TYPE.WALLET_NFT_BALANCE_SUCCESS: {
+      const { publicKey, balance } = action.payload;
+
+      const index = state.users.findIndex((user) => user.publicKey === publicKey);
+      if(index) {
+        const [...users] = state.users;
+        const {...newUser} = users[index];
+        newUser.nftbalance = balance;
+        users.splice(index, 1, newUser);
+
+        return {
+          ...state, 
+          users: [...users],
+        }
+      }
+
+      return state
     }
     
     default:{
