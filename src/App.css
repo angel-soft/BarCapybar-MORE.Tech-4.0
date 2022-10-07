@@ -1,3 +1,29 @@
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+h1 {
+  font-family: 'Jost', sans-serif;
+  font-size: 48px;
+}
+h2 {
+  font-family: 'Jost', sans-serif;
+  font-size: 36px;
+}
+
+h3 {
+  font-family: 'Jost', sans-serif;
+  font-size: 24px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+}
+
+
 @media screen and (max-width: 400px) {
   #features {
     padding: 20px;
