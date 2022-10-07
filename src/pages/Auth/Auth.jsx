@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../../redux/actions/userActions';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+
 import "./Auth.css";
 
 function Auth() {
@@ -55,9 +56,6 @@ function Auth() {
         </div>
       <button className="btn">Войти</button>
     </form>
-
-    <p>Уже есть аккаунт?</p>
-    <Link className="nav-item-link" to="/login">Войти</Link>
   </div>
   </div>
   );
