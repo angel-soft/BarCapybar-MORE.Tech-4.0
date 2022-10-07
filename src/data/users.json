@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "login": "s_andreev",
+    "name": "Сергей Андреев",
+    "password": "123sa",
+    "role": "supervisor",
+    "wallet": {
+      "publicKey": "0x93215ec610b70b4D803691F201905915B0FD5E2b",
+      "privateKey": "d9d7aab9c5054e9ffdc153ca7877340378db8e533b28bc05c41ec287c8048c5e"
+    }
+  },
+  {
+    "id": 2,
+    "login": "s_skiba",
+    "name": "София Скиба",
+    "password": "123ss",
+    "role": "editor",
+    "wallet": {
+      "publicKey": "0x37D0d4686BaBA7bB8f5b3C0E000599aeBF1932ec",
+      "privateKey": "19076b7c26b7c48d7eaa143f59b1e50df19b4e3156fd61ab1ab101e1bfe71db8"
+    }
+  },
+  {
+    "id": 3,
+    "login": "d_egorova",
+    "name": "Дарья Егорова",
+    "password": "123de",
+    "role": "administrator",
+    "wallet": {
+      "publicKey": "0x97DbDdC15D5e2a6aec63D0f2B102EDa60590E514",
+      "privateKey": "040cf5e1c666d6063dd54a3f10140402c2ed3c9626b011f70731917dff71d839"
+    }
+  },
+  {
+    "id": 4,
+    "login": "i_avdeev",
+    "name": "Иван Авдеев",
+    "password": "123ia",
+    "role": "user",
+    "wallet": {
+      "publicKey": "0x1d7b0a9DF20a4d3E9b038Fa0d3fFa1032a8b9581",
+      "privateKey": "4210dd9e88fcbb2cffa1f0bd240a4ee70534fc6f1759392fb99fba15d921b968"
+    }
+  },
+  {
+    "id": 5,
+    "login": "r_bormot",
+    "name": "Руслан Бормот",
+    "password": "123rb",
+    "role": "user",
+    "wallet": {
+      "publicKey": "0x349492278633241B3a79ad70200814d411eC23be",
+      "privateKey": "677b9f1a13ee415919ec5b254b5ab856022d6401bd9c2cf272d2837caacb7973"
+    }
+  },
+  {
+    "id": 6,
+    "login": "m_kalyakin",
+    "name": "Михаил Калякин",
+    "password": "123mk",
+    "role": "user",
+    "wallet": {
+      "publicKey": "0x785Bc5CfC0d30A2D0087a43b85181c93d185cc29",
+      "privateKey": "f7a985cc1f9e4776c2ab7017c1952d5e540b705d9b9ff0087cd4f46c0434e683"
+    }
+  },
+  {
+    "id": 7,
+    "login": "e_ivanova",
+    "name": "Екатерина Иванова",
+    "password": "123ei",
+    "role": "user",
+    "wallet": {
+      "publicKey": "0x63E190778076cBb855A5031b58C33843469591AF",
+      "privateKey": "f23c1550aa37a86ab5455ef197ab0739505a7b6c4f463c3069956361ab01d402"
+    }
+  },
+  {
+    "id": 8,
+    "login": "j_dologopolova",
+    "name": "Юлия Долгополова",
+    "password": "123jd",
+    "role": "user",
+    "wallet": {
+      "publicKey": "0x8c61bd0bf4F12b337CC8C4802ba5E099dEF8D94a",
+      "privateKey": "f8f9fc28d0717c833f9aac396787a96a40139834a4e46099bc0026a903ff463e"
+    }
+  },
+  {
+    "id": 9,
+    "login": "i_malinovskii",
+    "name": "Игорь Малиновский",
+    "password": "123im",
+    "role": "user",
+    "wallet": {
+      "publicKey": "0x0Fc869673A7EFbFB6257205755Ef980Bc29cE990",
+      "privateKey": "768e911cdcd865f73f51431f8567a7757862593c81dfeb52efa4d7ecf13fc53d"
+    }
+  },
+  {
+    "id": 10,
+    "login": "n_gudar",
+    "name": "Наталья Гударь",
+    "password": "123ng",
+    "role": "user",
+    "wallet": {
+      "publicKey": "0x39DC37EA15EF7A60e5d9558eb9E509b48C494907",
+      "privateKey": "4ecea6adb80963ce2df57db935c97762efd4ab5e6479606183eefb16c1697e16"
+    }
+  }
+]
