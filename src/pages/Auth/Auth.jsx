@@ -9,10 +9,7 @@ function Auth() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    first_name: "",
-    last_name: "",
-    phone: "",
-		email: "",
+    login: "",
 		password: "",
   });
 
@@ -38,18 +35,8 @@ function Auth() {
     <h2>Зарегистрируйте свой аккаунт</h2>
     <form onSubmit={handleSubmit}>
       <div className="card-input">
-      <label htmlFor="first_name" className="card-input__label">Имя</label>
-          <input type="text" name="first_name" id="first_name" className="card-input__input" value={formData.first_name}
-            onChange={handleChange} />
-        </div>
-      <div className="card-input">
-      <label htmlFor="last_name" className="card-input__label">Фамилия</label>
-          <input type="text" name="last_name" id="last_name" className="card-input__input" value={formData.last_name}
-            onChange={handleChange} />
-        </div>
-      <div className="card-input">
-          <label htmlFor="email" className="card-input__label">Email</label>
-          <input className="card-input__input" name="email" id="email" value={formData.email}
+      <label htmlFor="login" className="card-input__label">Имя</label>
+          <input type="text" name="login" id="login" className="card-input__input" value={formData.login}
             onChange={handleChange} />
         </div>
         <div className="card-input">
@@ -57,12 +44,7 @@ function Auth() {
           <input name="password" type="password" id="password" className="card-input__input" value={formData.password}
             onChange={handleChange} />
         </div>
-      <div className="card-input">
-        <label htmlFor="phone" className="card-input__label">Телефон</label>
-        <input name="phone" type="text" id="phone" className="card-input__input" value={formData.phone}
-            onChange={handleChange} />
-        </div>
-      <button className="btn">Зарегистрироваться</button>
+      <button className="btn">Войти</button>
     </form>
 
     <p>Уже есть аккаунт?</p>
