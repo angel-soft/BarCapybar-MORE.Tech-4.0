@@ -1,6 +1,6 @@
-import axios from 'axios'
+import Axios from 'axios'
 
-const instance = axios.create({
+const axios = Axios.create({
     baseURL: 'https://hackathon.lsp.team/hk',
     timeout: 15000,
 });
@@ -114,16 +114,53 @@ export const api = {
         return { transactionHash }
     },
     /* метод получения списка сгенерированных NFT */
-    async listNft() {
-        //`/v1/nft/generate/{transactionHash}`
+    async listNft({ transactionHash }) {
+        const {
+            wallet_id,
+            tokens
+        } = await axios.get(`/v1/nft/generate/${transactionHash}`)
+
+        return {
+            wallet_id,
+            tokens
+        }
     },
-    /* метод получения информации по NFT */
-    async statusNft() {
-        // `/v1/nft/{tokenId}`
+    /* метод получения информации по NFT
+    tokenId - идентификатор NFT
+    * */
+    async statusNft({ tokenId }) {
+        const {
+            uri,
+            publicKey
+        } = await axios.get(`/v1/nft/${tokenId}`)
+
+        return {
+            tokenId,
+            uri,
+            publicKey
+        }
     },
     /* метод получения истории транзакций по кошельку */
-    async walletHistory(){
-        // `/v1/wallets/{publicKey}/history`
+    async walletHistory({ publicKey }){
+        //
+        const {
+            history, /* Array<{
+                        "blockNumber": number,
+                        "timeStamp": number,
+                        "contractAddress": string,
+                        "from": string,
+                        "to": string,
+                        "value": number,
+                        "tokenName": string,
+                        "tokenSymbol": string,
+                        "gasUsed": number,
+                        "confirmations": number
+                    }> */
+        } = await axios.get(`/v1/wallets/${publicKey}/history`)
+
+        return {
+            history
+        }
     }
 }
 
