@@ -9,7 +9,7 @@ function UserList() {
   useEffect(() => {}, []);
   return (
     <div className="container">
-        <div className="wrapper">
+      <div className="wrapper">
         {users?.map((user) => (
           <UserNFTBalance key={user.id} id={user.id} />
         ))}
