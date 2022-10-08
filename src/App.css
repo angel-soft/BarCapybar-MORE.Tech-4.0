@@ -42,8 +42,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  padding: 24px 0px;
   justify-content: space-between;
+}
+
+.p-24 {
+  padding: 24px 0px;
 }
 
 #team {

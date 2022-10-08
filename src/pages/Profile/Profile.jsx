@@ -10,7 +10,7 @@ export function Profile() {
   return (
     <>
       <div className="container divider">
-        <div className="wrapper">
+        <div className="wrapper p-24">
           <div className="info">
             <h1>{user.name}</h1>
             <h3>{user.login}</h3>
