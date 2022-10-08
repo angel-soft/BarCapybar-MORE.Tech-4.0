@@ -38,6 +38,10 @@ function Auth() {
   };
 
   return (
+      <>
+        <video autoPlay muted loop id="video_background">
+          <source src="/video/cosmos.webm" type="video/webm"/>
+        </video>
     <div className="container-wrap">
     <div className="form-wrapper">
     <h2>Войти в сервис</h2>
@@ -56,6 +60,7 @@ function Auth() {
     </form>
   </div>
   </div>
+      </>
   );
 }
 
