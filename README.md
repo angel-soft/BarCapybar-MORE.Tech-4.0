@@ -1,5 +1,5 @@
 # BarCapybar-MORE.Tech-4.0
-
+![Заставка](src/assets/intro.png)
 ## Геймификация
 
 **Тематика** - Звездные войны.
