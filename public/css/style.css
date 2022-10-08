@@ -18,12 +18,12 @@ h2 {
   margin: 0 0 20px;
   font-weight: 800;
   font-size: 36px;
-  color: #333;
+  color: #0b0d0e;
 }
 h3 {
   font-size: 20px;
   font-weight: 600;
-  color: #333;
+  color: #0b0d0e;
 }
 h4 {
   font-size: 18px;
@@ -82,7 +82,7 @@ hr {
   font-family: "Jost", sans-serif;
   font-size: 26px;
   font-weight: 500;
-  color: #333;
+  color: #0b0d0e;
   text-transform: uppercase;
 }
 #menu.navbar-default .navbar-nav > li > a {
@@ -609,7 +609,7 @@ label {
 .img-1 {
   background-image: url(../img/profile/market-1.png);
   background-size: cover;
-  background-color: #333;
+  background-color: #0b0d0e;
 }
 
 @media (max-width: 768px) {

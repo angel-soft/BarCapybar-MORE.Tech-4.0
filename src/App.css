@@ -58,7 +58,7 @@ body {
 
 .green-bg {
   background-color: #73b052;
-  color: #e5e5e5;
+  color: #ffffff;
 }
 .between {
   justify-content: space-between;
@@ -68,6 +68,7 @@ body {
   padding: 4px 16px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+  text-align: center;
 }
 
 .pointer {
@@ -82,6 +83,22 @@ body {
   padding: 24px;
   flex-grow: 1;
 }
+
+input, 
+.custom {
+  height: 50px;    
+  width: 100%;
+  border: 2px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 
 .rounded {
   border-radius: 50%;

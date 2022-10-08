@@ -152,7 +152,7 @@ export const api = {
       }
     } = await axios.post(`/v1/wallets/${publicKey}/history`, {
       page: 100,
-      sort: "asc"
+      sort: "desc"
     });
 
     return {

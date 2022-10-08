@@ -95,7 +95,7 @@ export const reducer = (state = initialState, action) => {
           ...state,
           user: {
             ...state.user,
-            // history,
+            history,
           },
         };
       }

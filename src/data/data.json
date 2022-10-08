@@ -137,5 +137,67 @@
     { "uri": "http://localhost:3000/img/nft/50.png", "price": 300 },
     { "uri": "http://localhost:3000/img/nft/51.png", "price": 200 },
     { "uri": "http://localhost:3000/img/nft/52.png", "price": 1000 }
+  ],
+  "courses": [
+    {
+      "uri": "http://localhost:3000/img/courses/1.png",
+      "price": 100,
+      "title": "Как изменить привычки и повысить качество жизни",
+      "bgColor": "#e5e6da"
+    },
+    {
+      "uri": "http://localhost:3000/img/courses/2.png",
+      "price": 300,
+      "title": "Выгорание: как вернуть интерес к работе и жизни",
+      "bgColor": "#dcf4fe"
+    },
+    {
+      "uri": "http://localhost:3000/img/courses/3.png",
+      "price": 200,
+      "title": "UX/UI-дизайнер",
+      "bgColor": "#e8d1dc"
+    },
+    {
+      "uri": "http://localhost:3000/img/courses/4.png",
+      "price": 1000,
+      "title": "Менеджер маркетплейсов",
+      "bgColor": "#ebebeb"
+    },
+    {
+      "uri": "http://localhost:3000/img/courses/1.png",
+      "price": 500,
+      "title": "Интернет-маркетолог 2022",
+      "bgColor": "#febcb4"
+    },
+    {
+      "uri": "http://localhost:3000/img/courses/2.png",
+      "price": 5000,
+      "title": "SEO-специалист с нуля до PRO",
+      "bgColor": "#edf5f5"
+    },
+    {
+      "uri": "http://localhost:3000/img/courses/3.png",
+      "price": 2000,
+      "title": "Data Scientist",
+      "bgColor": "#fdf4ed"
+    },
+    {
+      "uri": "http://localhost:3000/img/courses/4.png",
+      "price": 10000,
+      "title": "Веб-разработчик",
+      "bgColor": "#dcf4fe"
+    },
+    {
+      "uri": "http://localhost:3000/img/courses/4.png",
+      "price": 100,
+      "title": "Английский для IT-специалистов",
+      "bgColor": "#f0f0f0"
+    }
+  ],
+  "merch": [
+    {
+      "uri": "http://localhost:3000/img/profile/market-1.png",
+      "price": 100
+    }
   ]
 }

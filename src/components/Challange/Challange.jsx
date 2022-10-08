@@ -6,7 +6,6 @@ export function Challange() {
     <div id="challange" style={{width: "100%", color: "#fff"}} className="card divider" >
       <span className="pin green-bg">#challange</span>
       <h3 style={{color: "#fff"}}>Испытай свои способности </h3>
-      <br />
       <div className="wrapper between">
         <div style={{width: "46%"}}>
           <h4>Придумай смешной стикер пак к юбилею компании</h4>

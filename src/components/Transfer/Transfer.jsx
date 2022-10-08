@@ -63,7 +63,7 @@ export function Transfer() {
           amount,
         })
       );
-    } else if (activeCurrency === "NFT11") {
+    } else if (activeCurrency === "NFT") {
       dispatch(
         transferNftRequest({
           fromPrivateKey: user.wallet.privateKey,
@@ -138,7 +138,7 @@ export function Transfer() {
               onChange={(event) => setAmount(event.target.valueAsNumber)}
               value={amount || ""}
             />
-            <button>Отправить</button>
+            <button className="custom">Отправить</button>
           </form>
         </>
       )}
