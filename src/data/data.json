@@ -60,7 +60,7 @@
     {
       "img": "img/team/02.jpg",
       "name": "Анжелика Фахритдинова",
-      "job": "Senior Backend Developer"
+      "job": "Senior Frontend Developer"
     }
   ],
   "Features": [
@@ -98,7 +98,6 @@
     { "uri": "http://localhost:3000/img/nft/10.png", "price": 300 },
     { "uri": "http://localhost:3000/img/nft/11.png", "price": 200 },
     { "uri": "http://localhost:3000/img/nft/12.png", "price": 1000 },
-    { "uri": "http://localhost:3000/img/nft/13.png", "price": 500 },
     { "uri": "http://localhost:3000/img/nft/14.png", "price": 5000 },
     { "uri": "http://localhost:3000/img/nft/15.png", "price": 2000 },
     { "uri": "http://localhost:3000/img/nft/16.png", "price": 10000 },
@@ -137,7 +136,6 @@
     { "uri": "http://localhost:3000/img/nft/49.png", "price": 100 },
     { "uri": "http://localhost:3000/img/nft/50.png", "price": 300 },
     { "uri": "http://localhost:3000/img/nft/51.png", "price": 200 },
-    { "uri": "http://localhost:3000/img/nft/52.png", "price": 1000 },
-    { "uri": "http://localhost:3000/img/nft/53.png", "price": 500 }
+    { "uri": "http://localhost:3000/img/nft/52.png", "price": 1000 }
   ]
 }
