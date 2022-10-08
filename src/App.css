@@ -46,6 +46,12 @@ body {
   justify-content: space-between;
 }
 
+#team {
+
+  background-color: #f6f6f6;
+
+}
+
 
 @media screen and (max-width: 400px) {
   #features {

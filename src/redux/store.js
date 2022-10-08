@@ -10,9 +10,7 @@ import { rootSaga } from "./sagas/rootSaga";
 const persistConfig = {
   key: "root",
   version: 1,
-  storage,
-  blacklist: ["counter"], // What you don't wanna to persist
-  whitelist: ["auth"], // What you want to persist
+  storage
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

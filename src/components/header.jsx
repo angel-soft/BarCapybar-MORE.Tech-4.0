@@ -7,15 +7,18 @@ export const Header = (props) => {
             <div className="row">
               <div className="col-md-8 col-md-offset-2 intro-text">
                 <h1>
-                  {props.data ? props.data.title : "Loading"}
+                  На чьей вы стороне?
                   <span></span>
                 </h1>
-                <p>{props.data ? props.data.paragraph : "Loading"}</p>
+                <p>
+                  Джедаи и ситхи, клоны и дроиды. <br/>
+                  Пришло время выбрать!
+                </p>
                 <a
                   href="#features"
                   className="btn btn-custom btn-lg page-scroll"
                 >
-                  Learn More
+                  Познай свою сторону Силы
                 </a>{" "}
               </div>
             </div>

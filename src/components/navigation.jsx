@@ -17,7 +17,7 @@ export const Navigation = (props) => {
             <span className="icon-bar"></span>{" "}
             <span className="icon-bar"></span>{" "}
           </button>
-          <a className="navbar-brand page-scroll" href="#page-top">
+          <a className="navbar-brand page-scroll" href="/#page-top">
             ВТБ Активности
           </a>{" "}
         </div>
@@ -27,6 +27,11 @@ export const Navigation = (props) => {
           id="bs-example-navbar-collapse-1"
         >
           <ul className="nav navbar-nav navbar-right">
+            <li>
+              <a href='#activities' className='page-scroll'>
+                Предстоящие активности
+              </a>
+            </li>
             <li>
               <Link to={"/users"}>Список пользователей</Link>
             </li>
