@@ -24,14 +24,17 @@ export function WalletBalance() {
       <h3>Баланс кошелка</h3>
       <br />
       <p>Монеты</p>
-      <div className="wrapper">
-        <h4>{wallet?.maticAmount ? wallet?.maticAmount : "0 M"}</h4>
+      <div className="wrapper between">
+        <h4>{wallet?.maticAmount ?? 0} M</h4>
+        <div>
+          <p className="green">+24 M  за месяц</p>
+        </div>
         <button>Перевести</button>
       </div>
       <br />
       <p>Рубли</p>
-      <div className="wrapper">
-        <h4>{wallet?.coinsAmount ? wallet?.coinsAmount : "0 руб"}</h4>
+      <div className="wrapper between">
+        <h4>{wallet?.coinsAmount ?? 0} руб</h4>
         <button>Перевести</button>
       </div>
     </div>

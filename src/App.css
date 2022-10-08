@@ -37,7 +37,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  justify-content: space-between;
 }
 
 .p-24 {
@@ -45,9 +44,29 @@ body {
 }
 
 #team {
-
   background-color: #f6f6f6;
+}
 
+.green {
+  color: #73b052;
+}
+
+.green-bg {
+  background-color: #73b052;
+  color: #e5e5e5;
+}
+.between {
+  justify-content: space-between;
+}
+
+.badge-currency {
+  padding: 4px 16px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 
