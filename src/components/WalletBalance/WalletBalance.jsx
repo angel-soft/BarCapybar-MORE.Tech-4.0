@@ -9,16 +9,15 @@ export function WalletBalance() {
 
   const dispatch = useDispatch();
 
-  const user = useSelector((state) => state.root.user);
+  const { wallet } = useSelector((state) => state.root.user);
 
-  const { wallet } = user;
+  const { publicKey } = wallet;
 
   useEffect(() => {
-    if(wallet) {
-      const { publicKey } = wallet;
+    if(publicKey) {
       dispatch(walletBalanceRequest({ publicKey }));
     }
-  }, [dispatch, wallet]);
+  }, [dispatch, publicKey]);
 
   return (
     <div className="cardInfo">
