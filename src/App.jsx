@@ -6,6 +6,8 @@ import Auth from "./pages/Auth/Auth";
 import UserList from "./pages/UserList/UserList";
 import { Profile } from "./pages/Profile/Profile";
 import { AuthRedirect } from "./AuthRedirect";
+import { Navigation } from "./components/navigation";
+
 import "./App.css";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -22,6 +24,7 @@ function App() {
     <>
     <BrowserRouter>
       <AuthRedirect />
+      <Navigation />
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/login" element={<Auth />} />

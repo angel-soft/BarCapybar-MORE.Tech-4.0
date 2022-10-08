@@ -21,7 +21,7 @@ function Auth() {
     dispatch(login(formData));
 
     if(store.getState().root.isAuth) {
-      toast("Вы успешно зарегистрированы");
+      toast(`Привет, ${store.getState().root.user.name}`);
       navigate("/");
     } else {
       toast("Ошибка");

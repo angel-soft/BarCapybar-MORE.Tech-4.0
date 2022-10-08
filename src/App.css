@@ -34,6 +34,10 @@ body {
   margin: 0 auto;
 }
 
+.divider {
+  margin-top: 80px;
+}
+
 
 @media screen and (max-width: 400px) {
   #features {

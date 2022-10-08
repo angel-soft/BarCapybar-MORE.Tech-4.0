@@ -2,7 +2,7 @@ import * as ActionTypes from "../actionTypes";
 import usersData from "../../data/users.json";
 
 const initialState = {
-  isAuth: true,
+  isAuth: false,
   user: {},
   users: usersData,
 }

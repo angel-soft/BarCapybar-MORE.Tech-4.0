@@ -8,7 +8,7 @@ function UserList() {
   const users = useSelector((state) => state.root.users);
   useEffect(() => {}, []);
   return (
-    <div className="container">
+    <div className="container divider">
         <div className="wrapper">
         {users?.map((user) => (
           <UserNFTBalance key={user.id} id={user.id} />
