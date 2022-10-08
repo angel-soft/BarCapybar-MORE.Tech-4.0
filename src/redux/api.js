@@ -38,7 +38,7 @@ export const api = {
     - `amount` - сумма перевода валюты
     * */
   async transferRuble({ fromPrivateKey, toPublicKey, amount }) {
-    const { transactionHash } = await axios.post(`/v1/transfers/ruble`, {
+    const { data: { transactionHash } } = await axios.post(`/v1/transfers/ruble`, {
       fromPrivateKey,
       toPublicKey,
       amount,
@@ -72,8 +72,8 @@ export const api = {
   },
   /* метод получения баланса по кошельку */
   async walletBalance({ publicKey }) {
-    const { maticAmount, coinsAmount } = await axios.get(
-      `/v1/wallets/${publicKey}/balance`
+    const { data: { maticAmount, coinsAmount } } = await Axios.get(
+      `https://hackathon.lsp.team/hk/v1/wallets/${publicKey}/balance`
     );
 
     return { maticAmount, coinsAmount };

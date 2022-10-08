@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 import {
   TRANSFER_MATIC_REQUEST,
   TRANSFER_MATIC_SUCCESS,
@@ -65,15 +67,19 @@ export const transferRubleSuccess = ({
   toPublicKey,
   amount,
   transactionHash,
-}) => ({
-  type: TRANSFER_RUBLE_SUCCESS,
-  payload: {
+}) => {
+
+  toast.success(`Транзакция прошла успешно`);
+  return {
+    type: TRANSFER_RUBLE_SUCCESS,
+    payload: {
     fromPrivateKey,
     toPublicKey,
     amount,
     transactionHash,
   },
-});
+  }
+};
 
 export const transferNftRequest = ({
   fromPrivateKey,

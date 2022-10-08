@@ -118,8 +118,8 @@ export function Transfer() {
                 placeholder="Сколько отправить"
                 type="number"
                 name="amount"
-                onChange={(event) => setAmount(event.target.value)}
-                value={amount}
+                onChange={(event) => setAmount(event.target.valueAsNumber)}
+                value={amount || ""}
               />
               <button>Отправить</button>
             </form>

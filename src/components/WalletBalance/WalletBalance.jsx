@@ -27,15 +27,16 @@ export function WalletBalance() {
       <div className="wrapper between">
         <h4>{wallet?.maticAmount ?? 0} M</h4>
         <div>
-          <p className="green">+24 M  за месяц</p>
+          <p className="green">{Math.round(wallet?.maticAmount * 0.4)} M  за месяц</p>
         </div>
-        <button>Перевести</button>
       </div>
       <br />
       <p>Рубли</p>
       <div className="wrapper between">
         <h4>{wallet?.coinsAmount ?? 0} руб</h4>
-        <button>Перевести</button>
+        <div>
+          <p className="green">{Math.round(wallet?.coinsAmount * 0.13)} руб за месяц</p>
+        </div>
       </div>
     </div>
   );
