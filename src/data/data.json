@@ -60,7 +60,7 @@
     {
       "img": "img/team/02.jpg",
       "name": "Анжелика Фахритдинова",
-      "job": "Senior Backend Developer"
+      "job": "Senior Frontend Developer"
     }
   ],
   "Features": [
@@ -84,5 +84,58 @@
       "title": "Используй возможности для роста",
       "text": "Нетворкинг упрощает доступ к информации и помогает продвигаться по карьерной лестнице"
     }
+  ],
+  "NFT": [
+    { "uri": "http://localhost:3000/img/nft/1.png", "price": 100 },
+    { "uri": "http://localhost:3000/img/nft/2.png", "price": 300 },
+    { "uri": "http://localhost:3000/img/nft/3.png", "price": 200 },
+    { "uri": "http://localhost:3000/img/nft/4.png", "price": 1000 },
+    { "uri": "http://localhost:3000/img/nft/5.png", "price": 500 },
+    { "uri": "http://localhost:3000/img/nft/6.png", "price": 5000 },
+    { "uri": "http://localhost:3000/img/nft/7.png", "price": 2000 },
+    { "uri": "http://localhost:3000/img/nft/8.png", "price": 10000 },
+    { "uri": "http://localhost:3000/img/nft/9.png", "price": 100 },
+    { "uri": "http://localhost:3000/img/nft/10.png", "price": 300 },
+    { "uri": "http://localhost:3000/img/nft/11.png", "price": 200 },
+    { "uri": "http://localhost:3000/img/nft/12.png", "price": 1000 },
+    { "uri": "http://localhost:3000/img/nft/14.png", "price": 5000 },
+    { "uri": "http://localhost:3000/img/nft/15.png", "price": 2000 },
+    { "uri": "http://localhost:3000/img/nft/16.png", "price": 10000 },
+    { "uri": "http://localhost:3000/img/nft/17.png", "price": 100 },
+    { "uri": "http://localhost:3000/img/nft/18.png", "price": 300 },
+    { "uri": "http://localhost:3000/img/nft/19.png", "price": 200 },
+    { "uri": "http://localhost:3000/img/nft/20.png", "price": 1000 },
+    { "uri": "http://localhost:3000/img/nft/21.png", "price": 500 },
+    { "uri": "http://localhost:3000/img/nft/22.png", "price": 5000 },
+    { "uri": "http://localhost:3000/img/nft/23.png", "price": 2000 },
+    { "uri": "http://localhost:3000/img/nft/24.png", "price": 10000 },
+    { "uri": "http://localhost:3000/img/nft/25.png", "price": 100 },
+    { "uri": "http://localhost:3000/img/nft/26.png", "price": 300 },
+    { "uri": "http://localhost:3000/img/nft/27.png", "price": 200 },
+    { "uri": "http://localhost:3000/img/nft/28.png", "price": 1000 },
+    { "uri": "http://localhost:3000/img/nft/29.png", "price": 500 },
+    { "uri": "http://localhost:3000/img/nft/30.png", "price": 5000 },
+    { "uri": "http://localhost:3000/img/nft/31.png", "price": 2000 },
+    { "uri": "http://localhost:3000/img/nft/32.png", "price": 10000 },
+    { "uri": "http://localhost:3000/img/nft/33.jpg", "price": 100 },
+    { "uri": "http://localhost:3000/img/nft/34.jpg", "price": 300 },
+    { "uri": "http://localhost:3000/img/nft/35.jpg", "price": 200 },
+    { "uri": "http://localhost:3000/img/nft/36.png", "price": 1000 },
+    { "uri": "http://localhost:3000/img/nft/37.png", "price": 500 },
+    { "uri": "http://localhost:3000/img/nft/38.png", "price": 5000 },
+    { "uri": "http://localhost:3000/img/nft/39.png", "price": 2000 },
+    { "uri": "http://localhost:3000/img/nft/40.png", "price": 10000 },
+    { "uri": "http://localhost:3000/img/nft/41.png", "price": 100 },
+    { "uri": "http://localhost:3000/img/nft/42.jpg", "price": 300 },
+    { "uri": "http://localhost:3000/img/nft/43.png", "price": 200 },
+    { "uri": "http://localhost:3000/img/nft/44.jpg", "price": 1000 },
+    { "uri": "http://localhost:3000/img/nft/45.png", "price": 500 },
+    { "uri": "http://localhost:3000/img/nft/46.jpg", "price": 5000 },
+    { "uri": "http://localhost:3000/img/nft/47.jpg", "price": 2000 },
+    { "uri": "http://localhost:3000/img/nft/48.png", "price": 10000 },
+    { "uri": "http://localhost:3000/img/nft/49.png", "price": 100 },
+    { "uri": "http://localhost:3000/img/nft/50.png", "price": 300 },
+    { "uri": "http://localhost:3000/img/nft/51.png", "price": 200 },
+    { "uri": "http://localhost:3000/img/nft/52.png", "price": 1000 }
   ]
 }

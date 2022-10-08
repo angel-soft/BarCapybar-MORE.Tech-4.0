@@ -4,6 +4,7 @@ import SmoothScroll from "smooth-scroll";
 import Main from "./pages/Main/Main";
 import Auth from "./pages/Auth/Auth";
 import UserList from "./pages/UserList/UserList";
+import User from "./pages/User/User";
 import { Profile } from "./pages/Profile/Profile";
 import { AuthRedirect } from "./AuthRedirect";
 import { Navigation } from "./components/navigation";
@@ -11,6 +12,7 @@ import { Navigation } from "./components/navigation";
 import "./App.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Marketplace from "./pages/Marketplace/Marketplace";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -33,6 +35,24 @@ function App() {
               </>
             }
           />
+        <Route
+            path="/users/:userId"
+            element={
+                <>
+                    <Navigation />
+                    <User/>
+                </>
+            }
+        />
+            <Route
+                path="/marketplace"
+                element={
+                    <>
+                        <Navigation />
+                        <Marketplace/>
+                    </>
+                }
+            />
           <Route
             path="/profile"
             element={

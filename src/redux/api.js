@@ -83,11 +83,12 @@ export const api = {
     * */
   async walletNftBalance({ publicKey }) {
     const {
+      data: {balance}
       /*
-                - `URI` - унифицированный (единообразный) идентификатор ресурса, сопряженный с NFT-коллекцией
+                - `uri` - унифицированный (единообразный) идентификатор ресурса, сопряженный с NFT-коллекцией
                 - `tokens` - массив NFT. Т.е. 5,3,4,6 - уникальные идентификаторы отдельного NFT в NFT-коллекции
              */
-      balance, // Array<{URI: string, tokens: Array<number> }>
+       // Array<{uri: string, tokens: Array<number> }>
     } = await axios.get(`/v1/wallets/${publicKey}/nft/balance`);
 
     return { balance };
