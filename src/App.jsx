@@ -4,6 +4,7 @@ import SmoothScroll from "smooth-scroll";
 import Main from "./pages/Main/Main";
 import Auth from "./pages/Auth/Auth";
 import UserList from "./pages/UserList/UserList";
+import User from "./pages/User/User";
 import { Profile } from "./pages/Profile/Profile";
 import { AuthRedirect } from "./AuthRedirect";
 import { Navigation } from "./components/navigation";
@@ -33,6 +34,15 @@ function App() {
               </>
             }
           />
+        <Route
+            path="/users/:userId"
+            element={
+                <>
+                    <Navigation />
+                    <User/>
+                </>
+            }
+        />
           <Route
             path="/profile"
             element={
