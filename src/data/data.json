@@ -35,15 +35,16 @@
       "smallImage": "img/activities/holyjs.jpg"
     },
     {
-      "title": "Project Title",
-      "link": "img/portfolio/04-large.jpg",
-      "smallImage": "img/portfolio/04-small.jpg"
+      "title": "IT-РЕВОЛЮЦИЯ в сфере финансов",
+      "largeImage": "img/portfolio/05-large.jpg",
+      "smallImage": "img/activities/it-революция.jpg"
     },
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/05-large.jpg",
-      "smallImage": "img/portfolio/05-small.jpg"
+      "title": "Последние тенденции IT в банковской сфере",
+      "link": "img/portfolio/04-large.jpg",
+      "smallImage": "img/activities/it-в-банках.png"
     },
+
     {
       "title": "IT-INDUSTRIAL CUP 2021",
       "link": "img/activities/футбол.jpg",
@@ -132,23 +133,13 @@
   "Team": [
     {
       "img": "img/team/01.jpg",
-      "name": "John Doe",
-      "job": "Director"
+      "name": "Антон Жуков",
+      "job": "Senior Backend Developer"
     },
     {
       "img": "img/team/02.jpg",
-      "name": "Mike Doe",
-      "job": "Senior Designer"
-    },
-    {
-      "img": "img/team/03.jpg",
-      "name": "Jane Doe",
-      "job": "Senior Designer"
-    },
-    {
-      "img": "img/team/04.jpg",
-      "name": "Karen Doe",
-      "job": "Project Manager"
+      "name": "Анжелика Фахритдинова",
+      "job": "Senior Backend Developer"
     }
   ],
   "Features": [
