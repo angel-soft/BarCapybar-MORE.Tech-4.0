@@ -158,13 +158,3 @@ export const api = {
 try {
   window.api = api;
 } catch {}
-
-void (async ()=>{
-  console.log(await api.generateNft({
-    toPublicKey: "0x93215ec610b70b4D803691F201905915B0FD5E2b",
-    uri: "http://localhost:3000/img/nft/2.png",
-    nftCount: 2
-  }))
-
-
-})()
