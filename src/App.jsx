@@ -12,6 +12,7 @@ import { Navigation } from "./components/navigation";
 import "./App.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Marketplace from "./pages/Marketplace/Marketplace";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -43,6 +44,15 @@ function App() {
                 </>
             }
         />
+            <Route
+                path="/marketplace"
+                element={
+                    <>
+                        <Navigation />
+                        <Marketplace/>
+                    </>
+                }
+            />
           <Route
             path="/profile"
             element={

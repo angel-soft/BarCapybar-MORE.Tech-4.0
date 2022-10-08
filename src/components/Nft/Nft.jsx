@@ -14,7 +14,7 @@ const Nft = ({ uri, token }) => {
           borderWidth: '2px',
           borderRadius: '1px',
           borderStyle: "solid",
-          borderColor: "rgba(0,0,0,0.5)"
+          borderColor: "rgba(0,0,0,0.25)"
       }}
     />
   );
