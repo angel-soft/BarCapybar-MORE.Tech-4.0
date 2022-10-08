@@ -21,10 +21,10 @@ function Auth() {
     dispatch(login(formData));
 
     if(store.getState().root.isAuth) {
-      toast(`Привет, ${store.getState().root.user.name}`);
+      toast.success(`Привет, ${store.getState().root.user.name}`);
       navigate("/");
     } else {
-      toast("Ошибка");
+      toast.error("Ошибка");
     }
   };
 

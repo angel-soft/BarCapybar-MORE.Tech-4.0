@@ -75,7 +75,7 @@ export function Transfer() {
       }))
     }
     else {
-      toast("Не удалось выполнить транзакцию");
+      toast.error("Не удалось выполнить транзакцию");
     }
   };
 
@@ -83,6 +83,12 @@ export function Transfer() {
     <div className="cardInfo">
       <h3>Отправьте монеты в качестве благодарности</h3>
       <br />
+      <div className="wrapper">
+            {currency.map((elem) => elem === activeCurrency ? 
+            <span className="badge-currency green-bg">{elem}</span> : 
+            <span className="badge-currency pointer" onClick={() => setActiveCurrency(elem)}>{elem}</span>)}
+        </div>
+        <br />
       <div ref={ref}>
       <input
         placeholder="Поиск"
@@ -105,12 +111,6 @@ export function Transfer() {
       <br />
         {receiver && (
           <>
-          <div className="wrapper">
-            {currency.map((elem) => elem === activeCurrency ? 
-            <span className="badge-currency green-bg">{elem}</span> : 
-            <span className="badge-currency pointer" onClick={() => setActiveCurrency(elem)}>{elem}</span>)}
-          </div>
-          <br />
             <p>Получатель</p>
             <h4>{receiver?.name}</h4>
             <form onSubmit={handleSubmit} className="wrapper between">
