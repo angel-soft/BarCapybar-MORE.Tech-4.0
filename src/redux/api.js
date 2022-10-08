@@ -136,19 +136,24 @@ export const api = {
   async walletHistory({ publicKey }) {
     //
     const {
-      history /* Array<{
-                        "blockNumber": number,
-                        "timeStamp": number,
-                        "contractAddress": string,
-                        "from": string,
-                        "to": string,
-                        "value": number,
-                        "tokenName": string,
-                        "tokenSymbol": string,
-                        "gasUsed": number,
-                        "confirmations": number
-                    }> */,
-    } = await axios.get(`/v1/wallets/${publicKey}/history`);
+      data: {
+        history /* Array<{
+          "blockNumber": number,
+          "timeStamp": number,
+          "contractAddress": string,
+          "from": string,
+          "to": string,
+          "value": number,
+          "tokenName": string,
+          "tokenSymbol": string,
+          "gasUsed": number,
+          "confirmations": number
+      }> */,
+      }
+    } = await axios.post(`/v1/wallets/${publicKey}/history`, {
+      page: 100,
+      sort: "asc"
+    });
 
     return {
       history,

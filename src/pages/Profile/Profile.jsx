@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { WalletBalance } from "../../components/WalletBalance/WalletBalance";
 import { Transfer } from "../../components/Transfer/Transfer";
+import { History } from "../../components/History/History";
 
 import "./Profile.css";
 
@@ -15,6 +16,7 @@ export function Profile() {
           <div className="info">
             <h1>{user.name}</h1>
             <h3>{user.login}</h3>
+            <History />
           </div>
           <div className="sidebar">
             <WalletBalance />

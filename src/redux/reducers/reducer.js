@@ -87,6 +87,22 @@ export const reducer = (state = initialState, action) => {
 
     }
 
+    case ActionTypes.WALLET_HISTORY_SUCCESS: {
+      const { publicKey, history } = action.payload;
+
+      if(state.user.wallet.publicKey === publicKey) {
+        return {
+          ...state,
+          user: {
+            ...state.user,
+            // history,
+          },
+        };
+      }
+      return state;
+
+    }
+
     default: {
       return state;
     }

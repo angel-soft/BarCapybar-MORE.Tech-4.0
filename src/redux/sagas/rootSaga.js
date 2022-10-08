@@ -152,7 +152,7 @@ function* walletHistorySaga({ payload: { publicKey } }) {
   });
 
   yield put(
-    apiActions.listNftSuccess({
+    apiActions.walletHistorySuccess({
       publicKey,
       history,
     })

@@ -1,4 +1,6 @@
-
+.info {
+  width: 60%;
+}
 .center {
   display: flex;
   align-items: center;
