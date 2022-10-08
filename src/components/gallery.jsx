@@ -5,10 +5,9 @@ export const Gallery = (props) => {
     <div id="portfolio" className="text-center">
       <div className="container">
         <div className="section-title">
-          <h2>Gallery</h2>
+          <h2>Предстоящие активности</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-            dapibus leonec.
+            Участие в жизни компании – твой путь к успеху!
           </p>
         </div>
         <div className="row">
@@ -26,7 +25,7 @@ export const Gallery = (props) => {
                     />
                   </div>
                 ))
-              : "Loading..."}
+              : "Загрузка..."}
           </div>
         </div>
       </div>

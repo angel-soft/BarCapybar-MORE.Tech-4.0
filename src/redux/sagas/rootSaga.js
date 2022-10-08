@@ -4,10 +4,10 @@ import * as apiActions from "../actions/apiActions";
 
 import * as ActionTypes from "../actionTypes";
 
-async function* transferMaticSaga({
+function* transferMaticSaga({
   payload: { fromPrivateKey, toPublicKey, amount },
 }) {
-  const { transactionHash } = await api.transferMatic({
+  const { transactionHash } = yield api.transferMatic({
     fromPrivateKey,
     toPublicKey,
     amount,
@@ -23,10 +23,10 @@ async function* transferMaticSaga({
   );
 }
 
-async function* transferRubleSaga({
+function* transferRubleSaga({
   payload: { fromPrivateKey, toPublicKey, amount },
 }) {
-  const { transactionHash } = await api.transferRuble({
+  const { transactionHash } = yield api.transferRuble({
     fromPrivateKey,
     toPublicKey,
     amount,
@@ -42,10 +42,10 @@ async function* transferRubleSaga({
   );
 }
 
-async function* transferNFTSaga({
+function* transferNFTSaga({
   payload: { fromPrivateKey, toPublicKey, tokenId },
 }) {
-  const { transactionHash } = await api.transferNft({
+  const { transactionHash } = yield api.transferNft({
     fromPrivateKey,
     toPublicKey,
     tokenId,
@@ -61,8 +61,8 @@ async function* transferNFTSaga({
   );
 }
 
-async function* transferStatusSaga({ payload: { transactionHash } }) {
-  const { status } = await api.transferStatus({
+function* transferStatusSaga({ payload: { transactionHash } }) {
+  const { status } = yield api.transferStatus({
     transactionHash,
   });
 
@@ -74,8 +74,8 @@ async function* transferStatusSaga({ payload: { transactionHash } }) {
   );
 }
 
-async function* walletBalanceSaga({ payload: { publicKey } }) {
-  const { maticAmount, coinsAmount } = await api.walletBalance({
+function* walletBalanceSaga({ payload: { publicKey } }) {
+  const { maticAmount, coinsAmount } = yield api.walletBalance({
     publicKey,
   });
 
@@ -88,8 +88,8 @@ async function* walletBalanceSaga({ payload: { publicKey } }) {
   );
 }
 
-async function* walletNftBalanceSaga({ payload: { publicKey } }) {
-  const { balance } = await api.walletNftBalance({
+function* walletNftBalanceSaga({ payload: { publicKey } }) {
+  const { balance } = yield api.walletNftBalance({
     publicKey,
   });
 
@@ -101,8 +101,8 @@ async function* walletNftBalanceSaga({ payload: { publicKey } }) {
   );
 }
 
-async function* generateNftSaga({ payload: { toPublicKey, uri, nftCount } }) {
-  const { transactionHash } = await api.generateNft({
+function* generateNftSaga({ payload: { toPublicKey, uri, nftCount } }) {
+  const { transactionHash } = yield api.generateNft({
     toPublicKey,
     uri,
     nftCount,
@@ -118,8 +118,8 @@ async function* generateNftSaga({ payload: { toPublicKey, uri, nftCount } }) {
   );
 }
 
-async function* listNftSaga({ payload: { transactionHash } }) {
-  const { tokens, wallet_id } = await api.listNft({
+function* listNftSaga({ payload: { transactionHash } }) {
+  const { tokens, wallet_id } = yield api.listNft({
     transactionHash,
   });
 
@@ -132,8 +132,8 @@ async function* listNftSaga({ payload: { transactionHash } }) {
   );
 }
 
-async function* statusNftSaga({ payload: { tokenId } }) {
-  const { uri, publicKey } = await api.statusNft({
+function* statusNftSaga({ payload: { tokenId } }) {
+  const { uri, publicKey } = yield api.statusNft({
     tokenId,
   });
 
@@ -146,8 +146,8 @@ async function* statusNftSaga({ payload: { tokenId } }) {
   );
 }
 
-async function* walletHistorySaga({ payload: { publicKey } }) {
-  const { history } = await api.walletHistory({
+function* walletHistorySaga({ payload: { publicKey } }) {
+  const { history } = yield api.walletHistory({
     publicKey,
   });
 
