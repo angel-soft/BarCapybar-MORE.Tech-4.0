@@ -43,8 +43,9 @@ export const reducer = (state = initialState, action) => {
       );
       if (index) {
         const [...users] = state.users;
-        const { ...newUser } = users[index];
-        newUser.nftbalance = balance;
+        const user = users[index];
+        const newUser = { ...user };
+        newUser["nftbalance"] = balance;
         users.splice(index, 1, newUser);
 
         return {
@@ -54,6 +55,23 @@ export const reducer = (state = initialState, action) => {
       }
 
       return state;
+    }
+
+    case ActionTypes.WALLET_BALANCE_SUCCESS: {
+      const { publicKey, maticAmount, coinsAmount } = action.payload;
+
+      if(state.user.wallet.publicKey === publicKey) {
+        return {
+          ...state,
+          user: {
+            ...state.user.wallet,
+            maticAmount,
+            coinsAmount,
+          }
+        };
+      }
+      return state;
+
     }
 
     default: {
