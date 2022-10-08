@@ -64,10 +64,13 @@ export const reducer = (state = initialState, action) => {
         return {
           ...state,
           user: {
-            ...state.user.wallet,
-            maticAmount,
-            coinsAmount,
-          }
+            ...state.user,
+            wallet: {
+              ...state.user.wallet,
+              maticAmount,
+              coinsAmount,
+            },
+          },
         };
       }
       return state;
