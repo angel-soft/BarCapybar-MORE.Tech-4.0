@@ -1,6 +1,6 @@
 import Axios from "axios";
 
-const baseUrl = "https://hackathon.lsp.team/hk"
+const baseUrl = "http://localhost:4000"
 const axios = Axios.create({
   baseURL: baseUrl,
   timeout: 15000,
@@ -98,33 +98,15 @@ export const api = {
     - `nftCount` - количество генерируемых NFT в коллекции
     * */
   async generateNft({ toPublicKey, uri, nftCount }) {
-    const body = JSON.stringify({
+
+    const { data: { transaction_hash } } = await axios.post(`/v1/nft/generate`, {
       toPublicKey,
       uri,
       nftCount,
-    })
-    const response = await fetch(`${baseUrl}/v1/nft/generate`, {
-      method: "POST",
-      mode:"no-cors",
-      headers: {
-        'Content-Type': 'application/json',
-        'Content-Length': body
-      },
-      body,
     });
-    const text = await response.text()
-    console.log(text)
-    if(response.ok) {
-      const {transactionHash} = JSON.parse(text);
 
-      // const { transactionHash } = await axios.post(`/v1/nft/generate`, {
-      //   toPublicKey,
-      //   uri,
-      //   nftCount,
-      // });
+    return {transaction_hash};
 
-      return {transactionHash};
-    }
   },
   /* метод получения списка сгенерированных NFT */
   async listNft({ transactionHash }) {
@@ -176,3 +158,13 @@ export const api = {
 try {
   window.api = api;
 } catch {}
+
+void (async ()=>{
+  console.log(await api.generateNft({
+    toPublicKey: "0x93215ec610b70b4D803691F201905915B0FD5E2b",
+    uri: "http://localhost:3000/img/nft/2.png",
+    nftCount: 2
+  }))
+
+
+})()
