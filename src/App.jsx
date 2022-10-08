@@ -22,12 +22,12 @@ function App() {
     <>
     <BrowserRouter>
       <AuthRedirect />
-      <Navigation />
+
           <Routes>
-            <Route path="/" element={<Main />} />
+            <Route path="/" element={<><Navigation /><Main /></>} />
             <Route path="/login" element={<Auth />} />
-            <Route path="/users" element={<UserList />} />
-            <Route path="/profile" element={<Profile />} />
+            <Route path="/users" element={<><Navigation /><UserList /></>} />
+            <Route path="/profile" element={<><Navigation /><Profile /></>} />
           </Routes>
       </BrowserRouter>
       <ToastContainer />

@@ -9,6 +9,10 @@
   text-align: center;
 }
 
+.container-wrap h2 {
+  color: #ffffff;
+}
+
 .container-wrap label {
   color: #ffffff;
   font-size: 14px;
