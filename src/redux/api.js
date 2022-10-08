@@ -1,7 +1,8 @@
 import Axios from "axios";
 
+const baseUrl = "https://hackathon.lsp.team/hk"
 const axios = Axios.create({
-  baseURL: "https://hackathon.lsp.team/hk",
+  baseURL: baseUrl,
   timeout: 15000,
 });
 
@@ -97,13 +98,33 @@ export const api = {
     - `nftCount` - количество генерируемых NFT в коллекции
     * */
   async generateNft({ toPublicKey, uri, nftCount }) {
-    const { transactionHash } = await axios.post(`/v1/nft/generate`, {
+    const body = JSON.stringify({
       toPublicKey,
       uri,
       nftCount,
+    })
+    const response = await fetch(`${baseUrl}/v1/nft/generate`, {
+      method: "POST",
+      mode:"no-cors",
+      headers: {
+        'Content-Type': 'application/json',
+        'Content-Length': body
+      },
+      body,
     });
+    const text = await response.text()
+    console.log(text)
+    if(response.ok) {
+      const {transactionHash} = JSON.parse(text);
 
-    return { transactionHash };
+      // const { transactionHash } = await axios.post(`/v1/nft/generate`, {
+      //   toPublicKey,
+      //   uri,
+      //   nftCount,
+      // });
+
+      return {transactionHash};
+    }
   },
   /* метод получения списка сгенерированных NFT */
   async listNft({ transactionHash }) {
@@ -151,3 +172,7 @@ export const api = {
     };
   },
 };
+
+try {
+  window.api = api;
+} catch {}
