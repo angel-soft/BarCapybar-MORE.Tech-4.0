@@ -10,7 +10,7 @@ export function UserNFTBalance({ id }) {
   const users = useSelector((state) => state.root.users);
   const user = users.find((user) => user.id === id);
 
-  const { name, login, wallet } = user;;
+  const { name, login, wallet } = user;
 
   useEffect(() => {
     if(wallet) {
@@ -19,13 +19,18 @@ export function UserNFTBalance({ id }) {
     }
   }, [dispatch, wallet]);
 
+  const nftCount = (user?.nftbalance ?? []).map(({tokens})=>tokens.length).reduce(
+      (acc,val)=> acc+val,
+      0
+  )
+
   return (
     <div className="card">
       <h3>{name}</h3>
       <p>{login}</p>
       <br />
       <h4>Баланс NFT</h4>
-      <h3>{user?.nftbalance ? user?.nftbalance : "0 NFT"}</h3>
+      <h3>{`${nftCount} NFT`}</h3>
     </div>
   );
 }

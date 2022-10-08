@@ -38,23 +38,33 @@ export const reducer = (state = initialState, action) => {
     case ActionTypes.WALLET_NFT_BALANCE_SUCCESS: {
       const { publicKey, balance } = action.payload;
 
-      const index = state.users.findIndex(
-        (user) => user.publicKey === publicKey
-      );
-      if (index) {
-        const [...users] = state.users;
-        const user = users[index];
-        const newUser = { ...user };
-        newUser["nftbalance"] = balance;
-        users.splice(index, 1, newUser);
+      // const index = state.users.findIndex(
+      //   (user) => user.publicKey === publicKey
+      // );
+      // if (index) {
+      //   const [...users] = state.users;
+      //   const user = users[index];
+      //   const newUser = { ...user };
+      //   newUser["nftbalance"] = balance;
+      //   users.splice(index, 1, newUser);
+      //
+      //   return {
+      //     ...state,
+      //     users: [...users],
+      //   };
+      // }
 
-        return {
-          ...state,
-          users: [...users],
-        };
-      }
-
-      return state;
+      return {
+        ...state,
+        users: state.users.map(
+            user => user.wallet.publicKey === publicKey ? (
+                {
+                  ...user,
+                  nftbalance: balance
+                }
+            ) : user
+        )
+      };
     }
 
     case ActionTypes.WALLET_BALANCE_SUCCESS: {
