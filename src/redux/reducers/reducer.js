@@ -5,14 +5,13 @@ const initialState = {
   isAuth: false,
   user: {},
   users: usersData,
-}
+};
 
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
-
     case ActionTypes.LOGIN: {
       const { login, password } = action.payload;
-      const found = state.users.find(user => {
+      const found = state.users.find((user) => {
         if (login === user.login && password === user.password) {
           return true;
         }
@@ -21,42 +20,44 @@ export const reducer = (state = initialState, action) => {
 
       if (found) {
         return {
-          ...state, 
+          ...state,
           isAuth: true,
-          user: found
-        }
+          user: found,
+        };
       }
-      return state
+      return state;
     }
 
     case ActionTypes.LOGOUT: {
       return {
-        ...state, 
+        ...state,
         isAuth: false,
-      }
+      };
     }
 
     case ActionTypes.WALLET_NFT_BALANCE_SUCCESS: {
       const { publicKey, balance } = action.payload;
 
-      const index = state.users.findIndex((user) => user.publicKey === publicKey);
-      if(index) {
+      const index = state.users.findIndex(
+        (user) => user.publicKey === publicKey
+      );
+      if (index) {
         const [...users] = state.users;
-        const {...newUser} = users[index];
+        const { ...newUser } = users[index];
         newUser.nftbalance = balance;
         users.splice(index, 1, newUser);
 
         return {
-          ...state, 
+          ...state,
           users: [...users],
-        }
+        };
       }
 
-      return state
+      return state;
     }
-    
-    default:{
-      return state
+
+    default: {
+      return state;
     }
   }
-}
+};
